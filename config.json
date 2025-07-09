@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "linkedin": {
+    "name": ".profile-name",
+    "company": ".company-info",
+    "education": ".edu-details"
+  },
+  "facebook": {
+    "name": "#fb-name",
+    "email": "#fb-email"
+  }
+}
