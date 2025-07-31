@@ -1,33 +1,42 @@
 {
- "version": "1.0.0",
+  "version": "1.1.0",
   "linkedin.com": {
-    "full_name": {
-      "selector": "h1.text-heading-xlarge.inline.t-24.v-align-middle.break-words",
-      "transform": "innerText"
+    "profile": {
+      "full_name": { "selector": "h1.text-heading-xlarge.inline.t-24.v-align-middle.break-words", "transform": "innerText" },
+      "container": { "selector": ".ph5.pb5" },
+      "pic_url": { "selector": "img", "transform": "src" },
+      "titles": { "selector": ".text-body-medium.break-words", "transform": "innerText" },
+      "location": { "selector": ".mt2.relative div:nth-of-type(2) span", "transform": "innerText" },
+      "company": { "selector": ".pv-text-details__right-panel li:nth-of-type(1) button span div", "transform": "innerText" },
+      "university": { "selector": ".pv-text-details__right-panel li:nth-of-type(2) button span div", "transform": "innerText" },
+      "idUser": { "selector": "[data-member-id]", "transform": "data-member-id" },
+      "contact_info_button": { "selector": "a[data-control-name='contact_see_more']", "transform": "href" }
     },
-    "container": { "selector": ".ph5.pb5" },
-    "pic_url": { "selector": "img", "transform": "src" },
-    "titles": {
-      "selector": ".text-body-medium.break-words",
-      "transform": "innerText"
+    "contact_info_api": {
+      "api_url_template": "https://www.linkedin.com/voyager/api/graphql?includeWebMetadata=true&variables=(memberIdentity:{id})&queryId=voyagerIdentityDashProfiles.84cab0be7183be5d0b8e79cd7d5ffb7b",
+      "fields": {
+        "email": "data.identityDashProfilesByMemberIdentity.elements[0].emailAddress.emailAddress",
+        "twitter": "data.identityDashProfilesByMemberIdentity.elements[0].twitterHandles[0].name",
+        "phone": "data.identityDashProfilesByMemberIdentity.elements[0].phoneNumbers[0].number"
+      }
     },
-    "location": {
-      "selector": ".mt2.relative div:nth-of-type(2) span",
-      "transform": "innerText"
-    },
-    "company": {
-      "selector": ".pv-text-details__right-panel li:nth-of-type(1) button span div",
-      "transform": "innerText"
-    },
-    "university": {
-      "selector": ".pv-text-details__right-panel li:nth-of-type(2) button span div",
-      "transform": "innerText"
-    },
-    "idUser": { "selector": "[data-member-id]", "transform": "data-member-id" }
+    "search": {
+      "people_list": { "selector": ".reusable-search__entity-result-list li" },
+      "person_name": { "selector": "span.entity-result__title-text", "transform": "innerText" },
+      "company_link": { "selector": "a.app-aware-link[href*='/company/']", "transform": "href" },
+      "profile_link": { "selector": "a.app-aware-link[href*='/in/']", "transform": "href" }
+    }
   },
   "mail.google.com": {
     "dom": { "selector": ".hx .gE" },
     "nameprofile": { "selector": ".gD", "transform": "innerText" },
     "email": { "selector": ".gD", "transform": "email" }
+  },
+  "facebook.com": {
+    "search": {
+      "result_list": { "selector": "div.x1i10hfl.x6ikm8r.x10wlt62.x1n2onr6" },
+      "profile_name": { "selector": "span.x3nfvp2", "transform": "innerText" },
+      "profile_link": { "selector": "a", "transform": "href" }
+    }
   }
 }
