@@ -15,11 +15,6 @@
             "selector": "[data-member-id]",
             "transform": "data-member-id"
         },
-        "linkedin_graphql_api": {
-            "url_template": "https://www.linkedin.com/voyager/api/graphql?includeWebMetadata=true&variables=(memberIdentity:{linkedin_id})&queryId=voyagerIdentityDashProfiles.84cab0be7183be5d0b8e79cd7d5ffb7b"
-        },
-      "emailAddress": "data.data.identityDashProfilesByMemberIdentity.elements[0].emailAddress.emailAddress",
-      "twitterHandleName": "data.data.identityDashProfilesByMemberIdentity.elements[0].twitterHandles[0].name",
         "location": {
             "selector": ".mt2.relative div:nth-of-type(2) span",
             "transform": "innerText"
