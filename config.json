@@ -8,7 +8,7 @@
             "selector": ".ph5.pb5"
         },
         "full_name": {
-            "selector": "h1.text-heading-xlarge.inline.t-24.v-align-middle.break-words",
+            "selector": "h1.inline.t-24.v-align-middle.break-words",
             "transform": "innerText"
         },
         "idUser": {
